@@ -1,0 +1,61 @@
+﻿" Sets how many lines of history VIM has to remember
+set history=500
+
+let mapleader = ","
+let g:mapleader = ","
+
+" disable arrow keys for HARD MODE
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" upper case current word
+map <leader>U gUiw
+" lower case current word
+map <leader>u guiw
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 1 tab == 2 spaces
+set shiftwidth=4
+set tabstop=4
+
+set ai "Auto indent
+set wrap "Wrap lines
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" When navigating across wrapped lines, navigate within the wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+
+
+" select all
+nnoremap <leader>a ggVG
+
+set clipboard=unnamed
+set ignorecase
+set incsearch
+set number
+set backspace=indent,eol,start
+
+" Highlight search results
+set hlsearch
+
+
+" No annoying sound on errors
+set tm=500
+
+
+" clear hightlight on space
+nnoremap <Space> :noh<CR> 
+" Add line with enter
+nmap <enter> i<cr><esc>k
+
+" Fast saving
+nmap <leader>w :w!<cr>

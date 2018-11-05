@@ -1,0 +1,78 @@
+﻿echo "VSVIM Config Loaded"
+
+" This file only contains Vsiaul Studio specific settings
+
+
+:source c:\users\mikael.evander\.vimrcbase
+
+" Debug {{{
+	nmap <leader>bd :vsc Debug.DisableAllBreakpoints<CR>
+	nmap <leader>be :vsc Debug.EnableAllBreakpoints<CR>
+	nmap <leader>bi :vsc Debug.ToggleBreakpoint<CR>
+	nmap <leader>d :vsc TestDriven.NET.RerunWithDebugger<CR>
+	nmap gn :vsc Debug.StepOver<CR>
+	nmap gi :vsc Debug.StepInto<CR>
+	nmap go :vsc Debug.StepOut<CR>
+	nmap gc :vcs Debug.RunToCursor<CR>
+	nmap <leader>dd :vsc Tools.AttachToIISExpress<CR>
+" }}}
+
+" Tests {{{
+	nmap <leader>tt :vsc TestExplorer.RepeatLastRun<CR>
+	nmap <leader>ts :vsc TestExplorer.ShowTestExplorer<CR>
+	nmap <leader>td :vsc TestExplorer.DebugAllTestsInContext<CR>
+" }}}
+
+
+" Code Edit {{{
+    nnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    vnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    nnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+    vnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+	noremap <C-S-Space> :vsc Edit.ParameterInfo<CR>
+" }}}
+
+" Views {{{
+    nmap gve :vsc View.ErrorList<CR>
+    nmap gvc :vsc View.ViewCode<CR>
+    nmap gvf :vsc View.FullScreen<CR>
+	nmap gvs :vsc View.SolutionExplorer<CR>
+    nmap gvn :vsc Project.ManageNuGetPackages<CR>
+	nmap gvo :vsc View.Output<CR>
+	nmap gvm :vsc View.ToggleDesigner<CR>
+	nmap gvp :vsc View.PackageManagerConsole<CR>
+    nmap gvt :vsc View.TaskList<CR>
+	nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
+
+
+" }}}
+
+" Code View {{{
+    nnoremap <leader>fm :vsc Edit.CollapsetoDefinitions<CR>
+    nnoremap <leader>fa :vsc Edit.ToggleAllOutlining<CR>
+    nnoremap <leader>ft :vsc Edit.ToggleOutliningExpansion<CR>
+    nmap <Leader>ww :vsc Edit.ToggleWordWrap<CR>
+" }}}
+
+
+" Window Managment {{{
+	nnoremap gnd :vsc Window.NextDocumentWindow<CR>
+    nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
+  	nnoremap L :vsc window.NextDocumentWindowNav<CR>
+    nnoremap <Leader>ws :vsc Window.Split<cr>
+    nnoremap <Leader>wj :vsc Window.NextSplitPane<cr>
+    nnoremap <Leader>wk :vsc Window.PreviousSplitPane<cr>
+    nnoremap <Leader>wN :vsc Window.MovetoPreviousTabGroup<cr>
+    nnoremap <Leader>wn :vsc Window.MovetoNextTabGroup<cr>
+    nnoremap <Leader>wh :vsc Window.NewHorizontalTabGroup<CR>
+    nnoremap <Leader>wv :vsc Window.NewVerticalTabGroup<CR>
+" }}}
+
+" Reload Config
+nmap <leader>s :source c:\users\mikaele\.vsvimrc<cr>
+
+" Close
+nmap <leader>q :vsc File.Close<cr>
+nmap <leader>Q :vsc Window.CloseAllDocuments<cr>
+nmap <leader>X :vsc File.CloseAllButThis<cr>
+
